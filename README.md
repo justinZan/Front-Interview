@@ -1,44 +1,33 @@
-# Web 前端开发工程师面试学习资料
+# Web 前端开发工程师面试资料
 
-这套资料依据一份 **Vue 3 企业级监控平台 / 能源物联网可视化** 岗位要求整理。目标是能在面试中讲清原理、写出关键代码、展示一个相关练习项目，并说明方案的取舍。
+基于 Vue 3 企业后台与能源物联网可视化岗位要求整理，涵盖前端基础、后台业务、实时数据、图表、性能和工程交付。
 
-## 从哪里开始
+## 资料目录
 
-| 顺序 | 资料 | 重点 |
-|---|---|---|
-| 0 | [岗位能力与面试题总览](./Web前端开发工程师_面试准备与学习路线.md) | 对照岗位、浏览题库、明确薄弱项 |
-| 1 | [前端基础与 Vue 工程化](./docs/01-前端基础与Vue工程化.md) | JS/TS、Vue 3、Pinia、Vite、组件化 |
-| 2 | [后台业务、组件与权限](./docs/02-后台业务组件与权限.md) | 路由、菜单/按钮权限、表格、表单、联调 |
-| 3 | [实时数据与可视化](./docs/03-实时数据与可视化.md) | WebSocket/SSE、断线恢复、ECharts、拓扑、大屏 |
-| 4 | [性能、交付与项目表达](./docs/04-性能交付与项目表达.md) | 性能测量、虚拟滚动、测试、部署、行为面试 |
-| 5 | [综合项目实战](./docs/05-综合项目实战.md) | 将全部知识串成可展示的监控台 |
+| 文档 | 内容 |
+|---|---|
+| [岗位技能与面试题总览](./Web前端开发工程师_面试准备与学习路线.md) | 岗位能力、核心面试题与项目要求 |
+| [前端基础与 Vue 工程化](./docs/01-前端基础与Vue工程化.md) | HTML/CSS、JavaScript、TypeScript、Vue 3、Pinia、Vite |
+| [后台业务、组件与权限](./docs/02-后台业务组件与权限.md) | 路由、权限、表单表格、组件封装与接口联调 |
+| [实时数据与可视化](./docs/03-实时数据与可视化.md) | WebSocket、SSE、状态同步、ECharts、拓扑与大屏 |
+| [性能、交付与项目表达](./docs/04-性能交付与项目表达.md) | 性能测量、虚拟滚动、测试、部署与项目复盘 |
+| [综合项目实战](./docs/05-综合项目实战.md) | 能源设备实时监控台的功能、数据契约与实现要点 |
 
-想集中刷题，可以进入 [面试题库与知识点地图](./docs/题库/README.md)：新增 164 道题（82 道 P0、82 道 P1），每题附知识点、参考回答和追问，并提供三套模拟面试组合。
+## 面试题库
 
-这些文档中的代码是学习示例；使用时要结合实际接口契约和项目结构调整。
+[题库索引](./docs/题库/README.md)收录 **164 道题**（P0 82 道、P1 82 道）。每题包含知识点、参考回答与延伸追问，按以下四卷组织：
 
-## 学习方法
+| 题卷 | 题数 |
+|---|---:|
+| [HTML、CSS、JavaScript、TypeScript 与浏览器](./docs/题库/01-HTML-CSS-JavaScript-TypeScript-浏览器.md) | 44 |
+| [Vue 3、Pinia、Vite 与后台业务](./docs/题库/02-Vue3-Pinia-Vite-后台业务.md) | 42 |
+| [WebSocket、SSE、ECharts 与性能](./docs/题库/03-WebSocket-SSE-ECharts-性能.md) | 42 |
+| [测试、部署、架构与项目追问](./docs/题库/04-测试部署架构与项目追问.md) | 36 |
 
-每个主题都按以下顺序学习：
+## 技术参考
 
-1. **读**：先看该章的概念和官方资料；用自己的话写下“它解决什么问题”。
-2. **做**：完成该章练习，在项目中制造至少一个异常场景（如网络慢、断线、空数据）。
-3. **讲**：不看文档，用 2 分钟回答一个题目；再按文档检查遗漏。
-4. **记**：记录代码、截图、测试数据和技术取舍，最后写进项目 README。
+- [Vue](https://github.com/vuejs/core) · [Vue Router](https://github.com/vuejs/router) · [Pinia](https://github.com/vuejs/pinia)
+- [Vite](https://github.com/vitejs/vite) · [TypeScript](https://github.com/microsoft/TypeScript)
+- [Element Plus](https://github.com/element-plus/element-plus) · [Ant Design Vue](https://github.com/vueComponent/ant-design-vue) · [ECharts](https://github.com/apache/echarts)
 
-## GitHub 官方学习入口
-
-- [Vue 核心仓库](https://github.com/vuejs/core)、[Vue Router 仓库](https://github.com/vuejs/router)、[Pinia 仓库](https://github.com/vuejs/pinia)
-- [Vite 仓库](https://github.com/vitejs/vite)、[TypeScript 仓库](https://github.com/microsoft/TypeScript)
-- [Element Plus 仓库](https://github.com/element-plus/element-plus)、[Ant Design Vue 仓库](https://github.com/vueComponent/ant-design-vue)
-- [ECharts 仓库](https://github.com/apache/echarts)
-
-建议从官方文档的 Guide / Examples 开始，再去 GitHub 看源码和 issue。对照岗位练习的目标是理解问题与方案，不需要读完整个仓库。
-
-## 学完的标准
-
-- 能展示一个“设备管理 + 实时监控 + 告警”的项目，并解释数据流。
-- 能现场说明断线重连、去重、补拉和图表更新的实现。
-- 能解释菜单/按钮权限、服务端鉴权、数据范围之间的关系。
-- 能提供至少一次真实测量的性能记录或明确的排查过程。
-- 能讲清自己做了什么、为什么这样做、遇到什么问题、结果如何。
+文档中的代码为场景示例，具体接口与业务规则以实际项目约定为准。
